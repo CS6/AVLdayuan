@@ -17,7 +17,7 @@ import StoreSlect from './components/store/StoreSlect'
 function App() {
   return (
     <div className="App">
-      <div>
+      <div >
       <Login />
 
         <StoreSlect />

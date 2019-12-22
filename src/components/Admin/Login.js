@@ -6,6 +6,7 @@ import { GoogleLogout } from 'react-google-login';
 // Firebase App (the core Firebase SDK) is always required and
 // must be listed before other Firebase SDKs
 import * as firebase from "firebase/app";
+import '../../Assts/font.css';
 
 // Add the Firebase services that you want to use
 import "firebase/auth";
@@ -35,7 +36,7 @@ class Login extends Component {
     this.state = {
       currentPage: 'one', //給預設值
       zoom: 11,
-      userName: "我忘了要先填表單",
+      userName: "工程師",
       isLogin: false,
       uid: "",
     }
@@ -76,16 +77,33 @@ class Login extends Component {
       return (
         // Important! Always set the container height explicitly
         <div style={{
-          display:"flex",
-          flexDirection:"row",
+          display: "flex",
+          // flexDirection: "row",
+          flexDirection: "column",
+          alignContent: "center",
+          justifyContent: "center"
         }}>
 
           <GoogleLogout
             clientId="310570288956-pta9bmgrrq3j24et7shrugbr9h76aa6m.apps.googleusercontent.com"
             buttonText="Logout"
             onLogoutSuccess={this.responseGoogle} />
-        
-        <h2>{this.state.userName}</h2>
+<div style={{
+          display: "flex",
+          flexDirection: "row",
+          alignContent: "center",
+          justifyContent: "center"
+        }}>
+
+          <h1 style={{
+            marginTop: '10px',
+            fontFamily: "myFamily",
+          }}>{this.state.userName} 你想</h1><h1 style={{
+            marginTop: '10px',
+            fontFamily: "myFamily",
+            fontSize: 70
+          }}>吃 什 麼 ？</h1>
+        </div>
 
         </div>
 
@@ -93,8 +111,10 @@ class Login extends Component {
     } else {
       return (
         <div style={{
-          display:"flex",
-          flexDirection:"row"
+          display: "flex",
+          flexDirection: "column",
+          alignContent: "center",
+          justifyContent: "center"
         }}>
 
 
@@ -105,8 +125,11 @@ class Login extends Component {
             onFailure={this.responseGoogle}
             cookiePolicy={'single_host_origin'}
           />
-          <h2>{this.state.userName}</h2>
-
+          <h1 style={{
+            marginTop: '10px',
+            fontFamily: "myFamily",
+            fontSize: 70
+          }}>吃 什 麼 ？</h1>
         </div>
 
       );

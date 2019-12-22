@@ -63,8 +63,17 @@ class StoreTab extends Component {
         borderRadius: ' 10px',
         // position: 'relative',
         boxShadow: '-1px 1px 2px rgba(0,0,0,.2)',
+        margin:'10px'
+
       }}>
-        <h1>  現在有開的店家</h1>
+          <style>
+@import url('https://fonts.googleapis.com/css?family=Ma+Shan+Zheng&display=swap');
+</style>
+        <h1 style={{
+          marginTop: '10px',
+        fontFamily: "'Ma Shan Zheng', cursive"
+
+        }}>现在有开的店家</h1>
 
         {/* <a>Invite {storeDB[0].store}</a> */}
         {/* <GetTime/> */}
@@ -75,16 +84,22 @@ class StoreTab extends Component {
               textDecoration: this.state.completed ? 'line-through' : 'none'
             }}
             extra={
-              <Button activeStyle={{ backgroundColor: 'red' }} type={this.state.completed ? 'ghost' : 'primary'} size="small" inline>small</Button>
+              <Button activeStyle={{ backgroundColor: 'red' }} type={this.state.completed ? 'ghost' : 'primary'} size="small" inline>看看</Button>
             }
             multipleLine
           >
             {console.log("text", index.store)}
             {index.store}
-            <h1>{index.store}</h1>
+            <h1 style={{
+          marginTop: '10px',
+        // fontFamily: "'Ma Shan Zheng', cursive"
+        fontFamily: "myFamily"
+
+        }}>{index.store}</h1>
             <List.Item.Brief >
               {index.store}
-              Can be collected, refund, discount management, view data and other operations
+              ：提供預約服務，您也可以給予評價
+              {/* Can be collected, refund, discount management, view data and other operations */}
     </List.Item.Brief>
 
           </List.Item>
@@ -97,5 +112,6 @@ class StoreTab extends Component {
     );
   }
 }
+
 
 export default StoreTab;
