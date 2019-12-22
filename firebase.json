@@ -8,6 +8,8 @@
   },
   "hosting": {
     "public": "build",
+    "site": "dayuan-avl-test",
+    // "site": "avldayuan01",
     "ignore": [
       "firebase.json",
       "**/.*",
