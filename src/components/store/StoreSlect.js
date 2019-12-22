@@ -57,6 +57,10 @@ class StoreSlect extends Component {
       let activeStore = storeDB.filter(index => {
         // console.log(index)
         // debugger
+        
+        
+        /// WIP   "store": "丸壽司",
+        // "Sun": "11:00-01:00", 要處理感知時間的問題
         return index[0][0] <this.state.min&& this.state.min < index[0][1]
       });
       // console.log(index)
