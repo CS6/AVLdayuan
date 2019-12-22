@@ -4,9 +4,72 @@ import React, { Component } from 'react';
 // must be listed before other Firebase SDKs
 import storeDB from "./data";
 import 'antd/dist/antd.css';
-import { Button, List, WhiteSpace, WingBlank } from 'antd-mobile';
 
 import { Table, Divider, Tag } from 'antd';
+const columns = [
+  {
+    title: 'Name',
+    dataIndex: 'name',
+    key: 'name',
+    render: text => <a>{text}</a>,
+  },
+  {
+    title: 'Tags',
+    key: 'tags',
+    dataIndex: 'tags',
+    render: tags => (
+      <span>
+        {tags.map(tag => {
+          let color = tag.length > 5 ? 'geekblue' : 'green';
+          if (tag === 'loser') {
+            color = 'volcano';
+          }
+          return (
+            <Tag color={color} key={tag}>
+              {tag.toUpperCase()}
+            </Tag>
+          );
+        })}
+      </span>
+    ),
+  },
+  {
+    title: 'Action',
+    key: 'action',
+    render: (text, record) => (
+      <span>
+        <a>Invite {record.name}</a>
+        <Divider type="vertical" />
+        <a>Delete</a>
+      </span>
+    ),
+  },
+];
+
+const data = [
+  {
+    key: '1',
+    name: 'John Brown',
+    age: 32,
+    address: 'New York No. 1 Lake Park',
+    tags: ['nice', 'developer'],
+  },
+  {
+    key: '2',
+    name: 'Jim Green',
+    age: 42,
+    address: 'London No. 1 Lake Park',
+    tags: ['loser'],
+  },
+  {
+    key: '3',
+    name: 'Joe Black',
+    age: 32,
+    address: 'Sidney No. 1 Lake Park',
+    tags: ['cool', 'teacher'],
+  },
+];
+
 
 class StoreTab extends Component {
   constructor(props) { //若要使用這個方法
@@ -20,7 +83,6 @@ class StoreTab extends Component {
         { lat: 85.955413, lng: 50.337844 },
         { lat: 95.955413, lng: 45.337844 },
       ],
-      completed:true,
       activeStoreList: [],
 
     }
@@ -69,30 +131,12 @@ class StoreTab extends Component {
       }}>
         <a>Invite {storeDB[0].store}</a>
         {this.state.activeStoreList.map((index) =>
-          // <a> {index.store}</a>
-          <List.Item
-          style={{
-            textDecoration: this.state.completed  ? 'line-through' : 'none'
-          }}
-          extra={
-            <Button  activeStyle={{ backgroundColor: 'red' }} type={this.state.completed ? 'ghost' : 'primary'} size="small" inline>small</Button>
-          }
-          multipleLine
-        >
-          {console.log("text", index.store)}
-          {index.store}
-          <h1>{index.store}</h1>
-          <List.Item.Brief >
-            {index.store}
-            Can be collected, refund, discount management, view data and other operations
-    </List.Item.Brief>
-    
-        </List.Item>
+          <a> {index.store}</a>
           )}
+        <Table columns={columns} dataSource={data} />
         {/* {this.props.array.map((index) =>
             <AnyReactComponent lat={index.lat} lng={index.lng} text={'Kreyser Avrora'} /> // eslint-disable-line react/no-array-index-key
           )} */}
-       
       </div>
     );
   }
