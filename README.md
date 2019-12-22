@@ -7,14 +7,16 @@
 
 目前版本是 第二版，加入 Google API 補充店家資訊
 
-- 第ㄧ版 建立醜醜的 UI ，資料處理，基本功能＆資料邏輯 （只有此部分在 2.5h 內完成）
+- 第ㄧ版 建立醜醜的 UI ，資料處理，基本功能＆資料邏輯 （只有此部分在 2.5h 內完成） [分支：add_firebase]
 - 第二版 加入 Google API 補充店家資訊，重訂 API 資料格式 [WIP]
 - 第三版 加入 DB 後台 補充店家資訊，重訂 API 資料格式 [WIP]
+
+
+![V1&V2](https://github.com/CS6/AVLdayuan/blob/New_beginning/DOC/AB.jpg?raw=true)
 
 ```bash
 還沒寫完
 ```
-
 ## 落地安裝
 
 Use the package manager [yarn & docker](https://自己google啦/) to install.
