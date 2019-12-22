@@ -64,8 +64,6 @@ class StoreCard extends Component {
     // let url = 'https://asia-northeast1-test-cf2e8.cloudfunctions.net/postjson';
     console.warn("addr");
 
-    let url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + this.props.storeName + "&language=zh-TW&key=AIzaSyC8Yg8Ig6VEZIWz8cWH3yfYOjAGzqIpDMI";
-    // let url = "https://maps.googleapis.com/maps/api/geocode/json?language=zh-TW&key=AIzaSyC8Yg8Ig6VEZIWz8cWH3yfYOjAGzqIpDMI&address="+addr;
 
     fetch(url).then((response) => {
       return response.json();

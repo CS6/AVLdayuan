@@ -73,7 +73,6 @@ class MiniMap extends Component {
         <GoogleMapReact
 
           options={this.createMapOptions}
-          bootstrapURLKeys={{ key: 'AIzaSyAHhhfSK9oqKXuDBvL0jgsbmxY6kmfh0hE' }}
           defaultCenter={
             {
               lat: this.props.lat,
