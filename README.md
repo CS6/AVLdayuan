@@ -1,68 +1,47 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 這是一份說明 DaYuan 的AVL面試題的文件 [made in](https://www.makeareadme.com/#mind-reading)
+~~文件沒在時間內寫完沒差吧？~~
 
-## Available Scripts
+由於 DaYuan 很愛吃，DaYuan 決定邊吃宵夜做完它。因此這也是一份 Release notes
 
-In the project directory, you can run:
+## Release  [V-1](https://avldayuan01.web.app/) [V-2](https://dayuan-avl-test.web.app/)
+目前版本是 第二版，加入 Google API 補充店家資訊
 
-### `yarn start`
+- 第ㄧ版 建立醜醜的 UI ，資料處理，基本功能＆資料邏輯 （只有此部分在 2.5h 內完成） [分支：add_firebase]
+- 第二版 加入 Google API 補充店家資訊，重訂 API 資料格式 [WIP]
+- 第三版 加入 DB 後台 補充店家資訊，重訂 API 資料格式 [WIP]
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+![V1&V2](https://github.com/CS6/AVLdayuan/blob/New_beginning/DOC/AB.jpg?raw=true)
 
-### `yarn test`
+```bash
+還沒寫完
+```
+## 落地安裝
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Use the package manager [yarn & docker](https://自己google啦/) to install.
 
-### `yarn build`
+- 使用 MongoDB
+- web 版使用 Firebase FireStore [Token 在這裡](https://🈸️請/)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+還沒寫完
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 用法ＷＩＰ
 
-### `yarn eject`
+```python
+import foobar
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+foobar.pluralize('word') # returns 'words'
+foobar.pluralize('goose') # returns 'geese'
+foobar.singularize('phenomena') # returns 'phenomenon'
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 貢獻
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Please make sure to update tests as appropriate.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
