@@ -9,14 +9,17 @@ import { Button,List, WhiteSpace, WingBlank } from 'antd-mobile';
 import 'antd-mobile/dist/antd-mobile.css';  // or 'antd-mobile/dist/antd-mobile.less'
 // import Counter from './examples/app';
 import Counter from './examples/app';
-
+import StoreTab from './components/store/StoreTab'
 
 function App() {
   return (
     <div className="App">
+      <div>
+      <StoreTab/>
+
+      </div>
       <BookToDoList/>
       <Counter />
-
   
 
       <div style={{
