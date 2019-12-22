@@ -1,7 +1,7 @@
 import React from 'react'
 import FilterLink from '../containers/FilterLink'
 import { VisibilityFilters } from '../actions'
-
+import GCbtn from '../containers/GCbtn'
 const Footer = () => (
   <div>
     <span>Show: </span>
@@ -14,6 +14,9 @@ const Footer = () => (
     <FilterLink filter={VisibilityFilters.SHOW_COMPLETED}>
       Completed
     </FilterLink>
+    <GCbtn >
+      GC
+    </GCbtn>
   </div>
 )
 

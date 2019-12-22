@@ -5,11 +5,20 @@ import RT from './RR';
 // import Main from './components/Main.js'
 // import Book from './components/Main.js'
 import BookToDoList from './components/BookToDoList'
+import { Button,List, WhiteSpace, WingBlank } from 'antd-mobile';
+import 'antd-mobile/dist/antd-mobile.css';  // or 'antd-mobile/dist/antd-mobile.less'
+// import Counter from './examples/app';
+import Counter from './examples/app';
+
 
 function App() {
   return (
     <div className="App">
       <BookToDoList/>
+      <Counter />
+
+  
+
       <div style={{
 		// backgroundColor: '#FAF',
 		borderRadius:22,
@@ -44,6 +53,32 @@ function App() {
           Learn React
         </a>
       </header>
+           
+
+      <Button>default</Button><WhiteSpace />
+    <Button disabled>default disabled</Button><WhiteSpace />
+
+  <List style={{ margin: '5px 0', backgroundColor: 'white' }}>
+    <List.Item
+      extra={<Button type="ghost" size="small" inline>small</Button>}
+      multipleLine
+    >
+      Regional manager
+      <List.Item.Brief>
+        Can be collected, refund, discount management, view data and other operations
+      </List.Item.Brief>
+    </List.Item>
+    <List.Item
+      extra={<Button type="primary" size="small" inline>small</Button>}
+      multipleLine
+    >
+      Regional manager
+      <List.Item.Brief>
+        Can be collected, refund, discount management, view data and other operations
+      </List.Item.Brief>
+    </List.Item>
+  </List>
+
     </div>
   );
 }
