@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 // Firebase App (the core Firebase SDK) is always required and
 // must be listed before other Firebase SDKs
 import storeDB from "./data";
+import GetTime from "./GetTime";
+
 import 'antd/dist/antd.css';
 import { Button, List, WhiteSpace, WingBlank } from 'antd-mobile';
 
@@ -20,7 +22,7 @@ class StoreTab extends Component {
         { lat: 85.955413, lng: 50.337844 },
         { lat: 95.955413, lng: 45.337844 },
       ],
-      completed:true,
+      completed:false,
       activeStoreList: [],
 
     }
@@ -68,6 +70,7 @@ class StoreTab extends Component {
         boxShadow: '-1px 1px 2px rgba(0,0,0,.2)',
       }}>
         <a>Invite {storeDB[0].store}</a>
+        <GetTime/>
         {this.state.activeStoreList.map((index) =>
           // <a> {index.store}</a>
           <List.Item
